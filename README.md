@@ -4,3 +4,22 @@ The basic idea of text-to-speech (TTS)  technology is to convert  written input 
 1. Simple voice recording and playing on demand; 
 2. Splitting of speech into 30-50 phonemes (basic linguistic units) and their re-assembly in a fluent speech pattern;
 3. The use of approximately 400 diaphones (splitting of phrases at the centre of the phonemes and not at the transition).
+Packages Used:
+
+pyttsx3: It is a Python library for Text to Speech. It has many functions which will help the machine to communicate with us. It will help the machine to speak to us
+PyPDF2: It will help to the text from the PDF. A Pure-Python library built as a PDF toolkit. It is capable of extracting document information, splitting documents page by page, merging documents page by page etc.
+
+Both these modules need to be installed
+
+pip install pyttsx3
+pip install PyPDF2
+
+Approach:
+
+Import the PyPDF2 and pyttx3 modules.
+Open the PDF file.
+Use PdfFileReader() to read the PDF. We just have to give the path of the PDF as the argument.
+Use the getPage() method to select the page to be read.
+Extract the text from the page using extractText().
+Instantiate a pyttx3 object.
+Use the say() and runwait() methods to speak out the text.
